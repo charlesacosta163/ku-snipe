@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     // Navigate to course search
     try {
       await page.goto(
-        `https://selfservice.kean.edu/Student/Courses/Search?keyword=${courseName}`,
+        `${process.env.NEXT_PUBLIC_SCHOOL_URL}?keyword=${courseName}`,
         { 
           waitUntil: "domcontentloaded",
           timeout: 30000 
