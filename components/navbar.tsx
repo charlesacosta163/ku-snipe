@@ -97,9 +97,12 @@ const Navbar = async () => {
                     >
                       Manage
                     </Link>
-                    <div className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg">
-                      Subscription
-                    </div>
+                    <Link
+                      href="/profile"
+                      className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg"
+                    >
+                      Profile
+                    </Link>
                   </div>
 
                     <form action={signOutFromGoogle} className="rounded">
