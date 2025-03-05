@@ -16,12 +16,12 @@ const Navbar = async () => {
 
   return (
     <header className="sticky top-4">
-      <nav className="flex justify-between items-center px-4 py-2 sm:px-6 sm:py-3 bg-[#f5f5ff] rounded-[20px] border-2 border-gray-200 ">
+      <nav className="flex justify-between items-center rounded-full px-4 py-1 sm:px-6 sm:py-3 bg-gray-50 sm:rounded-[20px] border-2 border-gray-200 ">
         <PageName />
-        <Link href='/dashboard' id='Logo' className='block sm:hidden font-large text-blue-400'>📘 Snipe</Link>
+        <Link href='/dashboard' id='Logo' className='block sm:hidden font-responsive sm:font-large text-blue-400'>📘 Snipe</Link>
 
         <div className="flex gap-4 items-center text-sm font-medium">
-          <Bell />
+          <Bell className="w-5 h-5 sm:w-6 sm:h-6"/>
 
           <span className="hidden sm:block">
             {!session?.user ? (
@@ -41,7 +41,7 @@ const Navbar = async () => {
             <input type="checkbox" id="nav-menu" className="peer hidden" />
 
             {/* Menu Button */}
-            <label htmlFor="nav-menu" className="cursor-pointer block p-2">
+            <label htmlFor="nav-menu" className="cursor-pointer text-sm block p-2">
               <AlignJustify />
             </label>
 

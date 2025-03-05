@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   return (
     <section className='sticky !important top-4'>
-        <div className='w-[250px] h-[calc(100vh-2rem)] bg-[#f5f5ff] flex flex-col gap-4 items-center p-4 rounded-[20px] border-2 border-gray-200'>
+        <div className='w-[250px] h-[calc(100vh-2rem)] bg-gray-50 flex flex-col gap-4 items-center p-4 rounded-[20px] border-2 border-gray-200'>
 
             <h1 id='Logo' className='logo text-blue-400'>📘 Snipe</h1>
 
@@ -21,7 +21,7 @@ const Sidebar = () => {
                 <Link href='/dashboard' className={`duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg ${isActive('/dashboard')}`}>Dashboard</Link>
                 <Link href='/search' className={`duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg ${isActive('/search')}`}>Search</Link>
                 <Link href='/manage' className={`duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg ${isActive('/manage')}`}>Manage</Link>
-                <div className='duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg'>Subscription</div>
+                <Link href='/profile' className={`duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg ${isActive('/profile')}`}>Profile</Link>
             </div>
         </div>
     </section>

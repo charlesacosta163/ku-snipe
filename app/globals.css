@@ -27,6 +27,12 @@
     letter-spacing: -0.025em;
   }
 
+  .font-responsive {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+  }
+
   .button {
     padding: 0.5rem 1rem;
     border-radius: 10px;

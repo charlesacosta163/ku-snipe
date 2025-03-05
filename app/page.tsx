@@ -193,10 +193,10 @@ const LandingPage = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-            {/* Free Plan */}
+            {/* Scout */}
             <div className="bg-white border border-gray-200 rounded-3xl p-8">
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold mb-2">Starter</h3>
+                <h3 className="text-xl font-bold mb-2">Scout</h3>
                 <div className="text-4xl font-bold mb-2">$0</div>
                 <div className="text-gray-600">Forever free</div>
               </div>
@@ -215,10 +215,10 @@ const LandingPage = () => {
               </button>
             </div>
 
-            {/* Basic Plan */}
+            {/* Sharpshooter Plan */}
             <div className="bg-blue-700 text-white rounded-3xl p-8 transform scale-105">
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold mb-2">Basic</h3>
+                <h3 className="text-xl font-bold mb-2">Sharpshooter</h3>
                 <div className="text-4xl font-bold mb-2">$5</div>
                 <div className="text-gray-200">per semester</div>
               </div>
@@ -241,10 +241,10 @@ const LandingPage = () => {
               </button>
             </div>
 
-            {/* Pro Plan */}
+            {/* Elite Plan */}
             <div className="bg-black text-white border border-gray-200 rounded-3xl p-8">
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold mb-2">Pro</h3>
+                <h3 className="text-xl font-bold mb-2">Elite</h3>
                 <div className="text-4xl font-bold mb-2">$9</div>
                 <div className="text-gray-600">per semester</div>
               </div>

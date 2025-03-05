@@ -45,9 +45,8 @@ export function WatchCourseForm({
               <span className="font-bold">{courseName}</span> added to watchlist!
             </div>
           )
-      router.push('/manage')  // Navigate after showing toast
     } else {
-      toast.error(result.error || 'Failed to add course to watchlist')
+      toast.error(result.error)
     }
   }
 

@@ -27,6 +27,10 @@ const ManageSnipesPage = async () => {
             return (
               <div key={course.course_code} className="flex justify-between items-center bg-white border-4 border-blue-100 p-4 sm:p-8 rounded-[20px]">
                 <div className="flex flex-col gap-2">
+                  <div className="flex gap-1 items-center">
+                    <div className="w-2 h-2 rounded-full bg-[#4556f8] animate-pulse"></div>
+                    <span className="text-xs font-medium text-[#4556f8]">Watching</span>
+                  </div>
                   <h2 className="font-bold text-lg">{course.course_code}</h2>
                   <p className="flex gap-2 items-center">
                     <User />
