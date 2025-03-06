@@ -25,7 +25,7 @@ const Navbar = async () => {
   const userCurrentTier = TIER_FEATURES.find((e) => e.tierName == user.tier);
 
   return (
-    <header className="sticky top-4">
+    <header className="sticky top-4 bg-white">
       <nav className="flex justify-between items-center rounded-full px-4 py-1 sm:px-6 sm:py-2 bg-transparent sm:rounded-full border-2 border-gray-200 shadow-lg">
         <PageName />
         <Link
