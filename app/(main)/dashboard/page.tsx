@@ -22,7 +22,7 @@ export default async function DashboardPage() {
       <section className="flex-1 flex flex-wrap gap-4 justify-center md:justify-start">
         <div className="flex flex-col w-[300px] rounded-[20px] border-2 border-gray-200">
           <img
-            src="https://image.cnbcfm.com/api/v1/image/106922887-1628206615260-gettyimages-887132600-as1700__08.jpeg?v=1628206641"
+            src="https://images.unsplash.com/photo-1628703117067-fb7c9c20946e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="w-full h-[200px] rounded-[20px] shadow"
           />
@@ -46,7 +46,7 @@ export default async function DashboardPage() {
 
         <div className="flex flex-col w-[300px] rounded-[20px] border-2 border-gray-200">
           <img
-            src="https://image.cnbcfm.com/api/v1/image/106922887-1628206615260-gettyimages-887132600-as1700__08.jpeg?v=1628206641"
+            src="https://plus.unsplash.com/premium_photo-1661877112841-0efa68b18527?q=80&w=3188&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
             className="w-full h-[200px] rounded-[20px] shadow"
           />
