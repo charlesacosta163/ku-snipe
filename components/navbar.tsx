@@ -26,7 +26,7 @@ const Navbar = async () => {
 
   return (
     <header className="sticky top-4">
-      <nav className="flex justify-between items-center rounded-full px-4 py-1 sm:px-6 sm:py-3 bg-transparent sm:rounded-full border-2 border-gray-200 ">
+      <nav className="flex justify-between items-center rounded-full px-4 py-1 sm:px-6 sm:py-2 bg-transparent sm:rounded-full border-2 border-gray-200 shadow-lg">
         <PageName />
         <Link
           href="/dashboard"
