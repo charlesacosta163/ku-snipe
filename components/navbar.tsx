@@ -4,24 +4,40 @@ import Link from "next/link";
 import { auth, signOut, signIn } from "@/lib/auth";
 import { signOutFromGoogle } from "@/lib/actions";
 import ProfileButton from "./profile-button";
-import { LogOut } from "lucide-react";
 
-import { Bell } from "lucide-react";
-import { AlignJustify } from "lucide-react";
+import {
+  LayoutDashboard,
+  BookOpenText,
+  Search,
+  User,
+  AlignJustify,
+  LogOut,
+  Bell,
+} from "lucide-react";
+
 import PageName from "./page-name";
+import { TIER_FEATURES } from "@/lib/constants";
 
 const Navbar = async () => {
   const session = await auth();
   const user = session?.user;
 
+  const userCurrentTier = TIER_FEATURES.find((e) => e.tierName == user.tier);
+
   return (
     <header className="sticky top-4">
-      <nav className="flex justify-between items-center rounded-full px-4 py-1 sm:px-6 sm:py-3 bg-gray-50 sm:rounded-[20px] border-2 border-gray-200 ">
+      <nav className="flex justify-between items-center rounded-full px-4 py-1 sm:px-6 sm:py-3 bg-transparent sm:rounded-full border-2 border-gray-200 ">
         <PageName />
-        <Link href='/dashboard' id='Logo' className='block sm:hidden font-responsive sm:font-large text-blue-400'>📘 Snipe</Link>
+        <Link
+          href="/dashboard"
+          id="Logo"
+          className="block sm:hidden font-responsive sm:font-large text-blue-400"
+        >
+          📘 Snipe
+        </Link>
 
         <div className="flex gap-4 items-center text-sm font-medium">
-          <Bell className="w-5 h-5 sm:w-6 sm:h-6"/>
+          <Bell className="w-5 h-5 sm:w-6 sm:h-6" />
 
           <span className="hidden sm:block">
             {!session?.user ? (
@@ -32,7 +48,11 @@ const Navbar = async () => {
                 Login
               </Link>
             ) : (
-              <ProfileButton image={user?.image || ""} name={user?.name || ""} />
+              <ProfileButton
+                image={user?.image || ""}
+                name={user?.name || ""}
+                tier={user?.tier || ""}
+              />
             )}
           </span>
 
@@ -41,7 +61,10 @@ const Navbar = async () => {
             <input type="checkbox" id="nav-menu" className="peer hidden" />
 
             {/* Menu Button */}
-            <label htmlFor="nav-menu" className="cursor-pointer text-sm block p-2">
+            <label
+              htmlFor="nav-menu"
+              className="cursor-pointer text-sm block p-2"
+            >
               <AlignJustify />
             </label>
 
@@ -73,39 +96,65 @@ const Navbar = async () => {
                       height={30}
                       className="rounded-full"
                     />
-                    <span className="text xs font-medium text-gray-600">
-                      {user?.name || "Not Logged In"}
-                    </span>
+                    <div className="flex flex-col">
+                      <span className="text-xs font-medium text-gray-600">
+                        {user?.name || "Not Logged In"}
+                      </span>
+                      <div
+                        className={`self-start text-[8px] font-semibold px-2 py-[0.075rem] rounded-full ${
+                          userCurrentTier?.tierName === "scout"
+                            ? "text-gray-700 bg-gray-200"
+                            : userCurrentTier?.tierName === "sharpshooter"
+                            ? "text-blue-700 bg-blue-100"
+                            : userCurrentTier?.tierName === "elite"
+                            ? "text-white bg-black"
+                            : ""
+                        }`}
+                      >
+                        {userCurrentTier?.tierName.toUpperCase()}
+                      </div>
+                    </div>
                   </header>
 
                   <div className="flex flex-col font-medium text-sm w-full text-blue-400">
-                    <Link
-                      href="/dashboard"
-                      className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg"
-                    >
-                      Dashboard
-                    </Link>
-                    <Link
-                      href="/search"
-                      className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg"
-                    >
-                      Search
-                    </Link>
-                    <Link
-                      href="/manage"
-                      className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg"
-                    >
-                      Manage
-                    </Link>
-                    <Link
-                      href="/profile"
-                      className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg"
-                    >
-                      Profile
-                    </Link>
-                  </div>
+                    <div className="flex items-center gap-2 duration-200 hover:bg-purple-100 px-2 py-1 rounded-lg">
+                      <LayoutDashboard className="w-4 h-4" />
+                      <Link
+                        href="/dashboard"
+                        className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg"
+                      >
+                        Dashboard
+                      </Link>
+                    </div>
+                    <div className="flex items-center gap-2 duration-200 hover:bg-purple-100 px-2 py-1 rounded-lg">
+                      <Search className="w-4 h-4" />
+                      <Link
+                        href="/search"
+                        className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg"
+                      >
+                        Search
+                      </Link>
+                    </div>
+                    <div className="flex items-center gap-2 duration-200 hover:bg-purple-100 px-2 py-1 rounded-lg">
+                      <BookOpenText className="w-4 h-4" />
+                      <Link
+                        href="/manage"
+                        className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg"
+                      >
+                        Manage
+                      </Link>
+                    </div>
+                    <div className="flex items-center gap-2 duration-200 hover:bg-purple-100 px-2 py-1 rounded-lg">
+                      <User className="w-4 h-4" />
+                      <Link
+                        href="/profile"
+                        className="duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg"
+                      >
+                        Profile
+                      </Link>
+                    </div>
 
-                    <form action={signOutFromGoogle} className="rounded">
+                    <form action={signOutFromGoogle} className="rounded mt-4">
                       <button
                         type="submit"
                         className="w-full text-red-400 font-medium hover:text-white hover:bg-red-400 flex gap-2 text-sm duration-200 rounded px-2 py-1 items-center"
@@ -113,6 +162,7 @@ const Navbar = async () => {
                         <LogOut className="rotate-180" /> Log Out
                       </button>
                     </form>
+                  </div>
                 </div>
               )}
             </div>

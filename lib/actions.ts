@@ -8,7 +8,14 @@ import { revalidatePath } from "next/cache";
 import { TIER_LIMITS } from "./constants";
 
 export async function signInWithGoogle() {
-    const response = await signIn("google", {redirectTo: "/dashboard"})
+    const session = await auth()
+    let response
+
+    if (session)
+      redirect("/dashboard")
+
+    else
+       response = await signIn("google", {redirectTo: "/dashboard"})
 }
 
 export async function signOutFromGoogle() {
@@ -74,7 +81,7 @@ export async function watchCourse(formData: FormData) {
         }
 
         // Check tier limit for sharpshooter
-        if (user.tier === "sharpshooter") {
+        else if (user.tier === "sharpshooter") {
           const { count } = await supabase
               .from("sniped_courses")
               .select("*", { count: 'exact' })
@@ -86,7 +93,28 @@ export async function watchCourse(formData: FormData) {
                   error: "Sharpshooter tier is limited to 3 courses. Upgrade to watch more courses!" 
               };
           }
-      }
+        }
+
+        else if (user.tier === "elite") {
+          const { count } = await supabase
+              .from("sniped_courses")
+              .select("*", { count: 'exact' })
+              .eq("user_id", user.id) as { count: number };
+
+          if (count >= 10) {
+              return { 
+                  success: false, 
+                  error: "You have reached the max limit of course snipes!" 
+              };
+          }
+        }
+
+        else {
+          return { 
+            success: false, 
+            error: "Request Denied!" 
+          };
+        }
         
         const userId = user.id;
         const courseCode = formData.get("courseCode") as string;

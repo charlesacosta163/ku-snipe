@@ -14,7 +14,7 @@ const ManageSnipesPage = async () => {
   if (!session?.user) return <NotLoggedIn />;
 
   const courses = await getWatchedCourses();
-
+  
   return (
     <div>
       <h1 className="font-bold text-[2rem] text-gray-700 tracking-tight">
