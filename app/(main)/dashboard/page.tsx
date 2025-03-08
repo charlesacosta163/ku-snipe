@@ -22,9 +22,9 @@ export default async function DashboardPage() {
       <section className="flex-1 flex flex-wrap gap-4 justify-center md:justify-start">
         <div className="flex flex-col w-[300px] rounded-[20px] border-2 border-gray-200">
           <img
-            src="https://images.unsplash.com/photo-1628703117067-fb7c9c20946e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1570070595458-307529e70001?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            className="w-full h-[200px] rounded-[20px] shadow"
+            className="w-full h-[200px] rounded-[20px] shadow object-cover object-center"
           />
 
           <div className="p-4 pt-2 flex flex-col gap-3 items-center text-center">
@@ -46,9 +46,9 @@ export default async function DashboardPage() {
 
         <div className="flex flex-col w-[300px] rounded-[20px] border-2 border-gray-200">
           <img
-            src="https://plus.unsplash.com/premium_photo-1661877112841-0efa68b18527?q=80&w=3188&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1504173010664-32509aeebb62?q=80&w=3227&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            className="w-full h-[200px] rounded-[20px] shadow"
+            className="w-full h-[200px] rounded-[20px] shadow object-cover object-top"
           />
 
           <div className="p-4 pt-2 flex flex-col gap-3 items-center text-center">

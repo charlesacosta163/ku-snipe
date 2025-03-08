@@ -4,6 +4,7 @@ import Link from "next/link";
 import { auth, signOut, signIn } from "@/lib/auth";
 import { signOutFromGoogle } from "@/lib/actions";
 import ProfileButton from "./profile-button";
+import UnderConstructionButton from "./under-construction-btn";
 
 import {
   LayoutDashboard,
@@ -37,6 +38,7 @@ const Navbar = async () => {
         </Link>
 
         <div className="flex gap-4 items-center text-sm font-medium">
+          <UnderConstructionButton />
           <Bell className="w-5 h-5 sm:w-6 sm:h-6" />
 
           <span className="hidden sm:block">

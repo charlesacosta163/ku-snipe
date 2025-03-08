@@ -130,7 +130,7 @@ const LandingPage = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">3. Get Notified Instantly</h3>
               <p className="text-gray-600">
-                Receive immediate notifications via email when a spot becomes available.
+                Receive immediate notifications via Discord when a spot becomes available.
               </p>
             </div>
           </div>
@@ -149,7 +149,7 @@ const LandingPage = () => {
             <AccordionItem value="item-1">
               <AccordionTrigger>How does Course Sniper work?</AccordionTrigger>
               <AccordionContent>
-                Course Sniper monitors your selected courses 24/7. When a seat becomes available, you'll receive an email reminder of your desired course.
+                Course Sniper monitors your selected courses 24/7. When a seat becomes available, you'll receive a Discord notification reminder of your desired course.
               </AccordionContent>
             </AccordionItem>
 
@@ -170,7 +170,7 @@ const LandingPage = () => {
             <AccordionItem value="item-5">
               <AccordionTrigger>What notification methods are available?</AccordionTrigger>
               <AccordionContent>
-                We currently only support email notifications.
+                We currently only support Discord notifications.
               </AccordionContent>
             </AccordionItem>
 
@@ -189,7 +189,7 @@ const LandingPage = () => {
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0">
           <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-6">Simple, Transparent Pricing</h2>
           <p className="text-gray-600 text-center mb-16 max-w-2xl">
-            Choose the plan that fits your needs. All plans include email notifications.
+            Choose the plan that fits your needs. All plans include Discord notifications.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
@@ -207,7 +207,7 @@ const LandingPage = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Email notifications</span>
+                  <span>Discord notifications</span>
                 </li>
               </ul>
               <button className="w-full bg-black text-white rounded-lg py-2 font-medium">
@@ -229,7 +229,7 @@ const LandingPage = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-400">✓</span>
-                  <span>Email notifications</span>
+                  <span>Discord notifications</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-400">✓</span>
@@ -245,7 +245,7 @@ const LandingPage = () => {
             <div className="bg-black text-white border border-gray-200 rounded-3xl p-8">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2">Elite</h3>
-                <div className="text-4xl font-bold mb-2">$9</div>
+                <div className="text-4xl font-bold mb-2">$8</div>
                 <div className="text-gray-600">per semester</div>
               </div>
               <ul className="space-y-4 mb-8">
@@ -255,7 +255,7 @@ const LandingPage = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Email notifications</span>
+                  <span>Discord notifications</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
