@@ -8,10 +8,10 @@ const CourseSections = ({data, userId}: {data: any, userId: string}) => {
 
       <div className="grid grid-cols-1 gap-4 mt-4">
         {
-          data.map((e: any) => {
+          data.map((e: any, index: number) => {
             return (
               <CourseSectionItem 
-                key={e.sections}
+                key={index}
                 term={e.term}
                 sections={e.sections}
                 userId={userId}

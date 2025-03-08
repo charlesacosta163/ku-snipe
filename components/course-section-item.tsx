@@ -32,13 +32,13 @@ const CourseSectionItem = ({
         </AccordionTrigger>
 
         <AccordionContent className="grid grid-cols-1 gap-4 mt-4">
-          {sections.map((e) => {
+          {sections.map((e, index) => {
             const [availableSeats, totalSeats] = e.seats
               .split(" / ")
               .map((e: string) => Number(e));
 
             return (
-              <React.Fragment key={e.name}>
+              <React.Fragment key={index}>
                 <div className="flex justify-between items-center gap-4">
                   <div className="flex flex-wrap gap-2">
                     <span className="font-bold text-gray-700 text-lg">
