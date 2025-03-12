@@ -4,6 +4,7 @@ import { watchCourse } from "@/lib/actions"
 import { toast } from "sonner"
 import { useFormStatus } from "react-dom"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 const SubmitButton = () => {
   const { pending } = useFormStatus()
@@ -41,8 +42,9 @@ export function WatchCourseForm({
     
     if (result.success) {
         toast.success(
-            <div>
-              <span className="font-bold">{courseName}</span> added to watchlist!
+            <div className="flex gap-2 items-center justify-between">
+              <span><b>{courseName}</b> added to watchlist!</span>
+                <Link href='/manage' className="px-2 py-1 text-xs rounded-lg bg-gray-700 text-white font-semibold">View</Link>
             </div>
           )
     } else {

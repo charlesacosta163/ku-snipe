@@ -18,6 +18,18 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "KU Sniper",
   description: "A course sniping tool",
+  openGraph: {
+    title: "KU Sniper",
+    description: "A course sniping tool",
+    images: [
+      {
+        url: "@/public/images/output.jpg", // Path to your image
+        width: 1200,
+        height: 630,
+        alt: "KU Sniper course tracking preview",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

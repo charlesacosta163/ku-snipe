@@ -7,6 +7,9 @@ import CourseSections from '@/components/course-sections'
 import Link from 'next/link'
 import { fetchCourseData } from '@/lib/actions'
 import NotLoggedIn from '@/components/not-logged-in'
+import ReloadPageBtn from '@/components/reloadpagebtn'
+
+
 const CoursePage = async ({searchParams} : {searchParams: Promise<{ [search: string]: string }>}) => {
     const search = (await searchParams).search
 
@@ -20,17 +23,21 @@ const CoursePage = async ({searchParams} : {searchParams: Promise<{ [search: str
     return (
         <div className="flex flex-col gap-4">
             <header className="flex justify-between gap-4 items-center">
-                <h1 className="font-bold text-[2rem] text-gray-700 tracking-tight">
+                <h1 className="font-bold text-[2rem] text-[#2A3370] tracking-tight">
                     Search Result: {search.toUpperCase()}
                 </h1>
                 <Link href="/search" className="button bg-gray-700 text-white">Back to Search</Link>
             </header>
 
             {data.error ? (
-                <div className="p-4 border border-red-200 bg-red-50 rounded-lg">
-                    <h2 className="text-red-800 font-semibold text-lg">{data.error}</h2>
-                    <p className="text-red-600">{data.message}</p>
-                </div>
+                <>
+                    <div className="p-4 border border-red-200 bg-red-50 rounded-lg">
+                        <h2 className="text-red-800 font-semibold text-lg">{data.error}</h2>
+                        <p className="text-red-600">{data.message}</p>
+                    </div>
+                    <ReloadPageBtn />
+                </>
+                
             ) : (
                 <div className="flex flex-col gap-4">
                     <section>

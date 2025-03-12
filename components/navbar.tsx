@@ -18,21 +18,26 @@ import {
 
 import PageName from "./page-name";
 import { TIER_FEATURES } from "@/lib/constants";
+import NotLoggedIn from "./not-logged-in";
+import { User as UserInterface } from "@/types/index";
 
 const Navbar = async () => {
   const session = await auth();
-  const user = session?.user;
+
+  if (!session?.user) return <></>;
+
+  const user = session?.user as UserInterface;
 
   const userCurrentTier = TIER_FEATURES.find((e) => e.tierName == user.tier);
 
   return (
-    <header className="sticky top-4 bg-white">
-      <nav className="flex justify-between items-center rounded-full px-4 py-1 sm:px-6 sm:py-2 bg-transparent sm:rounded-full border-2 border-gray-200 shadow-lg">
+    <header className="sticky top-4">
+      <nav className="flex justify-between items-center rounded-full px-4 py-1 sm:px-6 sm:py-2 bg-[#FFF5F5] sm:rounded-full border-2 border-[#B8C1E5] border-opacity-50 shadow-lg">
         <PageName />
         <Link
           href="/dashboard"
           id="Logo"
-          className="block sm:hidden font-responsive sm:font-large text-blue-400"
+          className="block md:hidden font-responsive sm:font-large text-blue-400"
         >
           📘 Snipe
         </Link>
@@ -41,7 +46,7 @@ const Navbar = async () => {
           <UnderConstructionButton />
           <Bell className="w-5 h-5 sm:w-6 sm:h-6" />
 
-          <span className="hidden sm:block">
+          <span className="hidden md:block">
             {!session?.user ? (
               <Link
                 href="/signin"
@@ -58,7 +63,7 @@ const Navbar = async () => {
             )}
           </span>
 
-          <div className="relative sm:hidden">
+          <div className="relative md:hidden">
             {/* Hidden Checkbox - Controls State */}
             <input type="checkbox" id="nav-menu" className="peer hidden" />
 
@@ -77,7 +82,7 @@ const Navbar = async () => {
             ></label>
 
             <div
-              className="fixed z-10 w-[200px] flex flex-col gap-4 bg-[#f5f5ff] shadow opacity-0 invisible 
+              className="fixed z-10 w-[200px] flex flex-col gap-4 bg-[#FFF5F5] shadow opacity-0 invisible 
     peer-checked:top-8 peer-checked:right-4 peer-checked:opacity-100 peer-checked:visible 
     transition-all rounded-lg p-4 border-2 border-gray-200"
             >
@@ -103,7 +108,7 @@ const Navbar = async () => {
                         {user?.name || "Not Logged In"}
                       </span>
                       <div
-                        className={`self-start text-[8px] font-semibold px-2 py-[0.075rem] rounded-full ${
+                        className={`self-start text-[8px] font-semibold px-2 py-[0.025rem] rounded-full ${
                           userCurrentTier?.tierName === "scout"
                             ? "text-gray-700 bg-gray-200"
                             : userCurrentTier?.tierName === "sharpshooter"
@@ -118,7 +123,7 @@ const Navbar = async () => {
                     </div>
                   </header>
 
-                  <div className="flex flex-col font-medium text-sm w-full text-blue-400">
+                  <div className="flex flex-col font-medium text-sm w-full text-[#2A3370] ">
                     <div className="flex items-center gap-2 duration-200 hover:bg-purple-100 px-2 py-1 rounded-lg">
                       <LayoutDashboard className="w-4 h-4" />
                       <Link

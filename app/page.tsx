@@ -9,7 +9,7 @@ import {
 
 const LandingPage = () => {
   return (
-    <main className="h-screen snap-none sm:snap-y sm:snap-mandatory overflow-y-scroll bg-purple-50">
+    <main className="h-screen snap-none sm:snap-y sm:snap-mandatory overflow-y-scroll bg-[#FFF5F5]">
       <section id="Home" className="relative snap-start h-auto md:h-screen w-full max-w-[1000px] mx-auto">
         <div className="fixed top-4 left-1/2 -translate-x-1/2">
           <nav className='text-sm text-gray-500 bg-white flex gap-4 px-4 py-2 shadow-md rounded-full font-semibold z-[100] items-center'>
@@ -18,7 +18,7 @@ const LandingPage = () => {
               <a href="#Features">Features</a>
               <a href="#FAQs">FAQs</a>
               <a href="#Pricing">Pricing</a>
-              <Link href="/signin" className='bg-blue-700 text-white px-2 py-1 text-xs rounded-lg font-semibold flex items-center gap-2'>
+              <Link href="/signin" className='bg-[#2A3370] text-white px-2 py-1 text-xs rounded-lg font-semibold flex items-center gap-2'>
                 Login
               </Link>
           </nav>
@@ -26,13 +26,9 @@ const LandingPage = () => {
 
         <div className="h-full flex flex-col items-center justify-center px-4 pt-20 md:pt-0">
           {/* Logo */}
-          <div className="bg-gray-100 rounded-lg px-3 py-2 flex items-center gap-2 mb-8 border-2 border-gray-200">
-          <h1 id='Logo' className='logo text-blue-400'>📘 Snipe</h1>
-
-          </div>
-
+          <h1 id='Logo' className='logo text-blue-400 mb-8'>📘 Snipe</h1>
           {/* Heading */}
-          <h1 className="text-4xl sm:text-6xl text-balance text-gray-700 font-bold text-center mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-6xl text-balance text-[#2A3370] font-bold text-center mb-6 tracking-tight">
             Never miss a spot in your<br />favorite courses again
           </h1>
 
@@ -44,7 +40,7 @@ const LandingPage = () => {
           {/* Search Input and Button */}
           <div className="mb-16">
 
-            <Link href='/signin' className="bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2">
+            <Link href='/signin' className="bg-[#2A3370] text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2">
               <span>🔔</span>
               Start Sniping
             </Link>
@@ -72,7 +68,7 @@ const LandingPage = () => {
         <div className="h-full flex flex-col md:flex-row items-center gap-16 px-4">
           {/* Left side - About content */}
           <div className="flex-1 space-y-6">
-            <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold">About Course Sniper</h2>
+            <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold text-[#2A3370]">About Course Sniper</h2>
             
             <p className="text-gray-600 text-lg">
               Course Sniper was born out of frustration. As students ourselves, we know how stressful course registration can be, especially when the classes you need are full.
@@ -86,9 +82,9 @@ const LandingPage = () => {
 
           {/* Right side - Mission statement */}
           <div className="flex-1">
-            <div className="bg-blue-700 text-white rounded-3xl p-12 text-center">
+            <div className="bg-[#2A3370] text-white rounded-3xl p-12 text-center">
               <div className="text-4xl mb-6">📚</div>
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold mb-4 text-[#B8C1E5]">Our Mission</h3>
               <p className="text-gray-300 text-lg">
                 To make course registration stress-free and efficient for every student.
               </p>
@@ -98,44 +94,44 @@ const LandingPage = () => {
       </section>
       <section id="Features" className="snap-start h-auto md:h-screen w-full max-w-[1000px] mx-auto">
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0">
-          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-16">How It Works</h2>
+          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-16 text-[#2A3370]">How It Works</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             {/* Step 1 */}
-            <div className="bg-white rounded-3xl p-8 text-center border-2 border-gray-200">
+            <div className="bg-[#B8C1E5] bg-opacity-10 rounded-3xl p-8 text-center">
               <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">📱</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">1. Enter Course Details</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#2A3370]">1. Enter Course Details</h3>
               <p className="text-gray-600">
                 Simply enter the course code you want to monitor. You can add multiple courses at once.
               </p>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white rounded-3xl p-8 text-center border-2 border-gray-200">
+            <div className="bg-[#B8C1E5] bg-opacity-10 rounded-3xl p-8 text-center ">
               <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">⏰</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">2. We Monitor 24/7</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#2A3370]">2. We Monitor 24/7</h3>
               <p className="text-gray-600">
                 Our system checks course availability every 10 minutes, ensuring you never miss an opening.
               </p>
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white rounded-3xl p-8 text-center border-2 border-gray-200">
+            <div className="bg-[#B8C1E5] bg-opacity-10 rounded-3xl p-8 text-center ">
               <div className="bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🔔</span>
               </div>
-              <h3 className="text-xl font-bold mb-3">3. Get Notified Instantly</h3>
+              <h3 className="text-xl font-bold mb-3 text-[#2A3370]">3. Get Notified Instantly</h3>
               <p className="text-gray-600">
                 Receive immediate notifications via Discord when a spot becomes available.
               </p>
             </div>
           </div>
 
-          <Link href='/signin' className="bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2">
+          <Link href='/signin' className="bg-[#2A3370] text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2">
             <span>⚡</span>
             Try It Now
           </Link>
@@ -143,32 +139,32 @@ const LandingPage = () => {
       </section>
       <section id="FAQs" className="snap-start h-auto md:h-screen w-full max-w-[1000px] mx-auto">
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0">
-          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-16">Frequently Asked Questions</h2>
+          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-16 text-[#2A3370]">Frequently Asked Questions</h2>
 
           <Accordion type="single" collapsible className="w-full mb-16">
             <AccordionItem value="item-1">
-              <AccordionTrigger>How does Course Sniper work?</AccordionTrigger>
+              <AccordionTrigger className='text-[#2A3370]'>How does Course Sniper work?</AccordionTrigger>
               <AccordionContent>
                 Course Sniper monitors your selected courses 24/7. When a seat becomes available, you'll receive a Discord notification reminder of your desired course.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3">
-              <AccordionTrigger>How fast are the notifications?</AccordionTrigger>
+              <AccordionTrigger className='text-[#2A3370]'>How fast are the notifications?</AccordionTrigger>
               <AccordionContent>
                 Notifications are sent within seconds of a seat becoming available, giving you the best chance to secure your spot.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4">
-              <AccordionTrigger>Can I monitor waitlisted courses?</AccordionTrigger>
+              <AccordionTrigger className='text-[#2A3370]'>Can I monitor waitlisted courses?</AccordionTrigger>
               <AccordionContent>
                 Yes, you can monitor both waitlisted courses and closed sections. We'll notify you as soon as a spot opens up.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5">
-              <AccordionTrigger>What notification methods are available?</AccordionTrigger>
+              <AccordionTrigger className='text-[#2A3370]'>What notification methods are available?</AccordionTrigger>
               <AccordionContent>
                 We currently only support Discord notifications.
               </AccordionContent>
@@ -178,7 +174,7 @@ const LandingPage = () => {
 
           <div className="text-center">
             <p className="text-gray-600 mb-4">Still have questions?</p>
-            <button className="bg-white border border-gray-200 px-6 py-3 rounded-lg font-medium flex items-center gap-2 mx-auto hover:bg-gray-50">
+            <button className="bg-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 mx-auto hover:bg-gray-50">
               <span>💬</span>
               Contact Support
             </button>
@@ -187,7 +183,7 @@ const LandingPage = () => {
       </section>
       <section id="Pricing" className="snap-start h-auto md:h-screen w-full max-w-[1000px] mx-auto">
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0">
-          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-6">Simple, Transparent Pricing</h2>
+          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-6 text-[#2A3370]">Simple, Transparent Pricing</h2>
           <p className="text-gray-600 text-center mb-16 max-w-2xl">
             Choose the plan that fits your needs. All plans include Discord notifications.
           </p>
@@ -196,8 +192,8 @@ const LandingPage = () => {
             {/* Scout */}
             <div className="bg-white border border-gray-200 rounded-3xl p-8">
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold mb-2">Scout</h3>
-                <div className="text-4xl font-bold mb-2">$0</div>
+                <h3 className="text-xl font-bold mb-2 text-[#2A3370]">Scout</h3>
+                <div className="text-4xl font-bold mb-2 text-[#2A3370]">$0</div>
                 <div className="text-gray-600">Forever free</div>
               </div>
               <ul className="space-y-4 mb-8">
@@ -210,13 +206,13 @@ const LandingPage = () => {
                   <span>Discord notifications</span>
                 </li>
               </ul>
-              <button className="w-full bg-black text-white rounded-lg py-2 font-medium">
+              <button className="w-full bg-[#2A3370] text-white rounded-lg py-2 font-medium">
                 Get Started
               </button>
             </div>
 
             {/* Sharpshooter Plan */}
-            <div className="bg-blue-700 text-white rounded-3xl p-8 transform scale-105">
+            <div className="bg-[#2A3370] text-white rounded-3xl p-8 transform scale-105">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2">Sharpshooter</h3>
                 <div className="text-4xl font-bold mb-2">$5</div>
@@ -245,7 +241,7 @@ const LandingPage = () => {
             <div className="bg-black text-white border border-gray-200 rounded-3xl p-8">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2">Elite</h3>
-                <div className="text-4xl font-bold mb-2">$8</div>
+                <div className="text-4xl font-bold mb-2">$9</div>
                 <div className="text-gray-600">per semester</div>
               </div>
               <ul className="space-y-4 mb-8">
@@ -262,7 +258,7 @@ const LandingPage = () => {
                   <span>Priority support</span>
                 </li>
               </ul>
-              <button className="w-full bg-white text-black rounded-lg py-2 font-medium">
+              <button className="w-full bg-[#2A3370] text-white rounded-lg py-2 font-medium">
                 Get Started
               </button>
             </div>
@@ -271,15 +267,15 @@ const LandingPage = () => {
       </section>
       <section id="CTA" className="snap-start h-auto md:h-screen w-full max-w-[1000px] mx-auto">
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0 text-center">
-          <div className="bg-white rounded-3xl p-12 md:p-16 w-full border-2 border-gray-200">
-            <h2 className="text-2xl sm:text-4xl font-bold mb-6">
+          <div className="bg-[#B8C1E5] bg-opacity-15 rounded-3xl p-12 md:p-16 w-full">
+            <h2 className="text-2xl sm:text-4xl font-bold mb-6 text-[#2A3370]">
               Ready to Never Miss a Course Again?
             </h2>
             <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
               Join fellow students who've already secured their desired courses. Start monitoring your first course for free.
             </p>
             <div className="flex justify-center">
-              <Link href='/signin' className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">
+              <Link href='/signin' className="bg-[#2A3370] text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">
                 <span>🎯</span>
                 Start Sniping Courses
               </Link>
@@ -287,7 +283,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-      <footer className="snap-start w-full max-w-[1000px] mx-auto px-4 py-16 bg-white rounded-t-3xl">
+      <footer className="snap-start w-full max-w-[1000px] mx-auto px-4 py-16 bg-transparent rounded-t-3xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="space-y-4">

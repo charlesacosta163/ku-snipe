@@ -7,7 +7,7 @@ const PageName = () => {
 
     const lastSegment = pathname.split('/').pop() || '';
     const pageName = lastSegment.charAt(0).toUpperCase() + lastSegment.slice(1);
-    return <h1 className="font-large hidden sm:block">{pageName}</h1>
+    return <h1 className="font-large hidden md:block text-[#2A3370]">{pageName}</h1>
 }
 
 export default PageName;
