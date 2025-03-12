@@ -25,7 +25,7 @@ const ManageSnipesPage = async () => {
         {courses.length > 0 ? (
           courses.map((course) => {
             return (
-              <div key={course.course_code} className="flex justify-between items-center bg-white border-4 border-blue-100 p-4 sm:p-8 rounded-[20px]">
+              <div key={course.course_code} className="flex justify-between items-center bg-transparent border-4 border-blue-100 p-4 sm:p-8 rounded-[20px]">
                 <div className="flex flex-col gap-2">
                   <div className="flex gap-2 items-center">
                     <div className="w-2 h-2 rounded-full bg-[#4556f8] animate-ping"></div>

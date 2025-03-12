@@ -70,7 +70,7 @@ const ProfilePage = async () => {
       <div className="flex flex-col sm:flex-row gap-4">
         <SignInDiscordBtn />
 
-      {user.tier == 'scout' || user.tier == 'sharpshooter' && (<button className="flex gap-2 items-center self-start font-medium text-gray-200 bg-[#2A3370] button hover:bg-gray-800 transition-colors">
+      {user.tier == 'scout' || user.tier == 'sharpshooter' ? (<button className="flex gap-2 items-center self-start font-medium text-gray-200 bg-[#2A3370] button hover:bg-gray-800 transition-colors">
       <svg
         className="w-5 h-5"
         viewBox="0 0 24 24"
@@ -86,7 +86,7 @@ const ProfilePage = async () => {
         />
       </svg>
       Upgrade Subscription
-    </button>)}
+    </button>) : <></>}
       </div>
     </section>
   );

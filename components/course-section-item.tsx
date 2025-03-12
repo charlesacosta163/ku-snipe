@@ -27,7 +27,7 @@ const CourseSectionItem = ({
         value="item-1"
         className="shadow px-4 rounded-[20px] border-l-4 border-l-blue-600"
       >
-        <AccordionTrigger className="font-semibold text-xl">
+        <AccordionTrigger className="font-semibold text-xl text-[#2A3370]">
           {term}
         </AccordionTrigger>
 

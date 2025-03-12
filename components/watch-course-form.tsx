@@ -12,7 +12,7 @@ const SubmitButton = () => {
   return (
     <button
       type="submit"
-      className="button bg-[#0095fd] text-white"
+      className="button bg-[#3746a7] text-[#e6ebff]"
       disabled={pending}
     >
       {pending ? 'Adding...' : 'Watch'}
