@@ -7,11 +7,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { User } from "lucide-react";
+import { User, University, Clock } from "lucide-react";
 import Form from "next/form";
 import { watchCourse } from "@/lib/actions";
 import { WatchCourseForm } from "./watch-course-form";
-
+import { getUniqueArray } from "@/lib/utils";
 const CourseSectionItem = ({
   term,
   sections,
@@ -25,7 +25,7 @@ const CourseSectionItem = ({
     <Accordion type="single" collapsible>
       <AccordionItem
         value="item-1"
-        className="shadow px-4 rounded-[20px] border-l-4 border-l-blue-600"
+        className="shadow px-4 rounded-[20px] border-l-4 border-l-[#7F8AC9]"
       >
         <AccordionTrigger className="font-semibold text-xl text-[#2A3370]">
           {term}
@@ -38,7 +38,7 @@ const CourseSectionItem = ({
               .map((e: string) => Number(e));
 
             return (
-              <React.Fragment key={index}>
+              <section key={index} className="bg-[#B8C1E5] bg-opacity-15 p-4 rounded-[20px]">
                 <div className="flex justify-between items-center gap-4">
                   <div className="flex flex-wrap gap-2">
                     <span className="font-bold text-gray-700 text-lg">
@@ -58,6 +58,8 @@ const CourseSectionItem = ({
                         seats={e.seats} 
                         term={term} 
                         userId={userId}
+                        locations={e.locations}
+                        meetingTimes={e.meetingTimes}
                       />
 
                     ) : (<button
@@ -70,13 +72,30 @@ const CourseSectionItem = ({
                 </div>
 
                 <div className="flex justify-between gap-4">
-                  <div id="info" className="flex flex-col gap-4">
-                    <div className="flex gap-2 text-sm font-medium">
-                      <User height={20} />
-                      <span className="self-end">{e.professor}</span>
+                  <div className="flex flex-col gap-4">
+                    <div id="info" className="flex flex-col gap-4">
+                      <div className="flex gap-2 text-sm font-medium">
+                        <User height={20} />
+                        <span className="self-end">{e.professor || "TBA"}</span>
+                      </div>
+                    </div>
+
+                    <div id="info" className="flex flex-col gap-4">
+                      <div className="flex gap-2 text-sm font-medium">
+                        <University height={20} />
+                        <span className="self-end">{getUniqueArray(e.locations).join(" ") || "TBA"}</span>
+                      </div>
+                    </div>
+
+                    <div id="info" className="flex flex-col gap-4">
+                      <div className="flex gap-2 text-sm font-medium">
+                        <Clock height={20} />
+                        <span className="self-end">{getUniqueArray(e.meetingTimes).join(" ") || "TBA"}</span>
+                      </div>
                     </div>
                   </div>
 
+                  <span className="mt-2">
                   {availableSeats < 1 ? (
                     <div>
                       <span className="px-3 py-1 rounded-full bg-red-500 text-white font-bold text-xs m-auto">
@@ -90,10 +109,10 @@ const CourseSectionItem = ({
                       </span>
                     </div>
                   )}
+                  </span>
                 </div>
 
-                <hr />
-              </React.Fragment>
+              </section>
             );
           })}
         </AccordionContent>

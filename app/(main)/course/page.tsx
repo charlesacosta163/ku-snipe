@@ -8,26 +8,37 @@ import Link from 'next/link'
 import { fetchCourseData } from '@/lib/actions'
 import NotLoggedIn from '@/components/not-logged-in'
 import ReloadPageBtn from '@/components/reloadpagebtn'
+import { ALL_TERMS, ALL_LOCATIONS } from '@/lib/constants'
 
 
-const CoursePage = async ({searchParams} : {searchParams: Promise<{ [search: string]: string }>}) => {
-    const search = (await searchParams).search
+const CoursePage = async ({searchParams} : {searchParams: { search?: string, term?: string, location?: string }}) => {
+    const { search, term, location } = await searchParams;
 
     const session = await auth();
 
     if (!session?.user) return <NotLoggedIn />;
 
     // Fetch course data
-    const data = await fetchCourseData(search);
+    const data = await fetchCourseData(search || "", term || "", location || "");
+    const termName = ALL_TERMS.find(t => t.termValue === term)?.termName || "";
+    const locationName = ALL_LOCATIONS.find(l => l.locationValue === location)?.locationName || "";
      
     return (
         <div className="flex flex-col gap-4">
+            <div className='flex flex-col gap-2'>
             <header className="flex justify-between gap-4 items-center">
-                <h1 className="font-bold text-[2rem] text-[#2A3370] tracking-tight">
-                    Search Result: {search.toUpperCase()}
+            <h1 className="font-bold text-[2rem] sm:text-[3rem] text-[#2A3370] tracking-tight">
+
+                🐾 Search Result: {search?.toUpperCase() || ""}
                 </h1>
                 <Link href="/search" className="button bg-gray-700 text-white">Back to Search</Link>
             </header>
+            
+            <div className='flex gap-2'>
+            <p className='text-xs bg-[#7F8AC9] text-white px-2 py-1 rounded-full font-bold self-start'>{termName}</p>
+            <p className='text-xs bg-[#7F8AC9] text-white px-2 py-1 rounded-full font-bold self-start'>{locationName}</p>
+            </div>
+            </div>
 
             {data.error ? (
                 <>

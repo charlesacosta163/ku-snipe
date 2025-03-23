@@ -16,14 +16,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "KU Sniper",
-  description: "A course sniping tool",
+  metadataBase: new URL("https://kusnipe.vercel.app"),
+  title: "KU Watch",
+  description: "Kean University Course Sniping Tool",
   openGraph: {
-    title: "KU Sniper",
-    description: "A course sniping tool",
+    title: "KU Watch",
+    description: "Kean University Course Sniping Tool",
     images: [
       {
-        url: "@/public/images/output.jpg", // Path to your image
+        url: "../public/images/output.jpg", // Path to your image
         width: 1200,
         height: 630,
         alt: "KU Sniper course tracking preview",

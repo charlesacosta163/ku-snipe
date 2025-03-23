@@ -10,6 +10,11 @@ const ReloadPageBtn = () => {
     const handleClick = () => {
         setLoading(true); // Change button text to "Retrying..."
         router.refresh(); // Refresh the page
+
+        // Timeout function to set back to retry after 10 seconds
+        setTimeout(() => {
+            setLoading(false);
+        }, 10000);
     };
 
     return (

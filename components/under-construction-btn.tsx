@@ -19,7 +19,7 @@ const UnderConstructionButton = () => {
         <DialogHeader>
           <DialogTitle>This app is currently in development.</DialogTitle>
           <DialogDescription className='text-gray-200'>
-            All features are not available yet. Discord notifications are not working at the moment. Backend work is still in progress. Although, the app is still functional and you can still watch your favorite courses, but without Discord notifications.
+            All features are not available yet. Discord notifications are currently working, however the notfications UI is not available yet. Stay tuned!
           </DialogDescription>
         </DialogHeader>
       </DialogContent>

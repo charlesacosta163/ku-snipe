@@ -26,8 +26,8 @@ const LandingPage = () => {
 
         <div className="h-full flex flex-col items-center justify-center px-4 pt-20 md:pt-0">
           {/* Logo */}
-          <h1 id='Logo' className='logo text-blue-400 mb-8'>📘 Snipe</h1>
-          {/* Heading */}
+          <h1 id='Logo' className='logo font-serif italic bg-[#2A3370] text-white px-4 py-2 text-xs rounded-lg font-semibold flex items-center gap-2 mb-2'>📘 KU-WATCH</h1>
+          <p className='bg-orange-500 text-white px-2 py-1 text-xs rounded-lg font-semibold self-center mb-4'>0.1 Beta</p>          {/* Heading */}
           <h1 className="text-4xl sm:text-6xl text-balance text-[#2A3370] font-bold text-center mb-6 tracking-tight">
             Never miss a spot in your<br />favorite courses again
           </h1>
@@ -41,8 +41,8 @@ const LandingPage = () => {
           <div className="mb-16">
 
             <Link href='/signin' className="bg-[#2A3370] text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2">
-              <span>🔔</span>
-              Start Sniping
+              <span>🐆</span>
+              Start Watching
             </Link>
 
           </div>
@@ -68,10 +68,10 @@ const LandingPage = () => {
         <div className="h-full flex flex-col md:flex-row items-center gap-16 px-4">
           {/* Left side - About content */}
           <div className="flex-1 space-y-6">
-            <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold text-[#2A3370]">About Course Sniper</h2>
+            <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold text-[#2A3370]">🐾 About KU Watch 🐾</h2>
             
             <p className="text-gray-600 text-lg">
-              Course Sniper was born out of frustration. As students ourselves, we know how stressful course registration can be, especially when the classes you need are full.
+              KU Watch was born out of frustration. As students ourselves, we know how stressful course registration can be, especially when the classes you need are full.
             </p>
 
             <p className="text-gray-600 text-lg">
@@ -94,7 +94,7 @@ const LandingPage = () => {
       </section>
       <section id="Features" className="snap-start h-auto md:h-screen w-full max-w-[1000px] mx-auto">
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0">
-          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-16 text-[#2A3370]">How It Works</h2>
+          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-16 text-[#2A3370]">🐾 How It Works 🐾</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
             {/* Step 1 */}
@@ -115,7 +115,7 @@ const LandingPage = () => {
               </div>
               <h3 className="text-xl font-bold mb-3 text-[#2A3370]">2. We Monitor 24/7</h3>
               <p className="text-gray-600">
-                Our system checks course availability every 10 minutes, ensuring you never miss an opening.
+                Our system checks course availability every 30 minutes, ensuring you never miss an opening.
               </p>
             </div>
 
@@ -139,13 +139,13 @@ const LandingPage = () => {
       </section>
       <section id="FAQs" className="snap-start h-auto md:h-screen w-full max-w-[1000px] mx-auto">
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0">
-          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-16 text-[#2A3370]">Frequently Asked Questions</h2>
+          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-16 text-[#2A3370]">🐾 Frequently Asked Questions 🐾</h2>
 
           <Accordion type="single" collapsible className="w-full mb-16">
             <AccordionItem value="item-1">
-              <AccordionTrigger className='text-[#2A3370]'>How does Course Sniper work?</AccordionTrigger>
+              <AccordionTrigger className='text-[#2A3370]'>How does KU Watch work?</AccordionTrigger>
               <AccordionContent>
-                Course Sniper monitors your selected courses 24/7. When a seat becomes available, you'll receive a Discord notification reminder of your desired course.
+                KU Watch monitors your selected courses 24/7. When a seat becomes available, you'll receive a Discord notification reminder of your desired course. Our algorithm checks every 30 minutes.
               </AccordionContent>
             </AccordionItem>
 
@@ -172,23 +172,23 @@ const LandingPage = () => {
 
           </Accordion>
 
-          <div className="text-center">
+          <a href='mailto:charlesacosta163@gmail.com' className="text-center">
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <button className="bg-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 mx-auto hover:bg-gray-50">
               <span>💬</span>
               Contact Support
             </button>
-          </div>
+          </a>
         </div>
       </section>
       <section id="Pricing" className="snap-start h-auto md:h-screen w-full max-w-[1000px] mx-auto">
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0">
-          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-6 text-[#2A3370]">Simple, Transparent Pricing</h2>
+          <h2 className="text-2xl mt-16 md:mt-0 sm:text-4xl font-bold mb-6 text-[#2A3370]">🐾 Simple, Transparent Pricing 🐾</h2>
           <p className="text-gray-600 text-center mb-16 max-w-2xl">
             Choose the plan that fits your needs. All plans include Discord notifications.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 w-full">
             {/* Scout */}
             <div className="bg-white border border-gray-200 rounded-3xl p-8">
               <div className="text-center mb-6">
@@ -199,20 +199,22 @@ const LandingPage = () => {
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>1 course monitoring</span>
+                  <span>2 courses monitoring</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
                   <span>Discord notifications</span>
                 </li>
               </ul>
-              <button className="w-full bg-[#2A3370] text-white rounded-lg py-2 font-medium">
-                Get Started
-              </button>
+              <Link href='/signin' className="w-full bg-[#2A3370] text-white rounded-lg py-2 font-medium">
+                <button className="w-full bg-[#2A3370] text-white rounded-lg py-2 font-medium">
+                  Get Started
+                </button>
+              </Link>
             </div>
 
             {/* Sharpshooter Plan */}
-            <div className="bg-[#2A3370] text-white rounded-3xl p-8 transform scale-105">
+            <div className="bg-[#2A3370] text-white rounded-3xl p-8">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold mb-2">Sharpshooter</h3>
                 <div className="text-4xl font-bold mb-2">$5</div>
@@ -221,7 +223,7 @@ const LandingPage = () => {
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center gap-2">
                   <span className="text-green-400">✓</span>
-                  <span>3 courses monitoring</span>
+                  <span>6 courses monitoring</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-400">✓</span>
@@ -229,39 +231,18 @@ const LandingPage = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="text-green-400">✓</span>
-                  <span>Priority support</span>
+                  <span>See how many people are watching the same course</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="text-green-400">✓</span>
+                  <span>And many more advanced features!</span>
                 </li>
               </ul>
-              <button className="w-full bg-white text-blue-700 rounded-lg py-2 font-medium">
-                Get Started
+              <button className="w-full bg-white text-blue-700 rounded-lg py-2 font-medium disabled:opacity-50 disabled:cursor-not-allowed"  disabled>
+                Coming Soon
               </button>
             </div>
-
-            {/* Elite Plan */}
-            <div className="bg-black text-white border border-gray-200 rounded-3xl p-8">
-              <div className="text-center mb-6">
-                <h3 className="text-xl font-bold mb-2">Elite</h3>
-                <div className="text-4xl font-bold mb-2">$9</div>
-                <div className="text-gray-600">per semester</div>
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span>
-                  <span>10 courses monitoring</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span>
-                  <span>Discord notifications</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span>
-                  <span>Priority support</span>
-                </li>
-              </ul>
-              <button className="w-full bg-[#2A3370] text-white rounded-lg py-2 font-medium">
-                Get Started
-              </button>
-            </div>
+          
           </div>
         </div>
       </section>
@@ -269,10 +250,10 @@ const LandingPage = () => {
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0 text-center">
           <div className="bg-[#B8C1E5] bg-opacity-15 rounded-3xl p-12 md:p-16 w-full">
             <h2 className="text-2xl sm:text-4xl font-bold mb-6 text-[#2A3370]">
-              Ready to Never Miss a Course Again?
+            🐾 Ready to Never Miss a Course Again? 🐾
             </h2>
             <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-              Join fellow students who've already secured their desired courses. Start monitoring your first course for free.
+              Join fellow students who've already secured their desired courses. Start monitoring your first two courses for free.
             </p>
             <div className="flex justify-center">
               <Link href='/signin' className="bg-[#2A3370] text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">
@@ -288,7 +269,7 @@ const LandingPage = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-                <h1 id='Logo' className='logo text-blue-400'>📘 Snipe</h1>
+                <h1 id='Logo' className='logo font-serif italic bg-[#2A3370] text-white px-4 py-2 text-xs rounded-lg font-semibold flex items-center gap-2'>📘 KU-WATCH</h1>
             </div>
             <p className="text-sm text-gray-600">
               Making course registration stress-free for every student.
@@ -328,7 +309,7 @@ const LandingPage = () => {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-600 mb-4 md:mb-0">
-            © 2024 Course Sniper. All rights reserved.
+            © 2025 KU Watch. All rights reserved.
           </p>
         </div>
       </footer>

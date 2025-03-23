@@ -7,20 +7,44 @@ export const TIER_LIMITS = {
 export const TIER_FEATURES = [
   {
     tierName: "scout",
-    maxSnipedCourses: 1,
-    messagingMethod: "Email notifications",
+    maxSnipedCourses: 2,
+    messagingMethod: "Discord notifications",
   },
   {
     tierName: "sharpshooter",
-    maxSnipedCourses: 3,
-    messagingMethod: "Email notifications",
-  },
-  {
-    tierName: "elite",
-    maxSnipedCourses: 10,
-    messagingMethod: "Email notifications",
-  },
+    maxSnipedCourses: 5,
+    messagingMethod: "Discord notifications",
+  }
 ];
+
+export const ALL_TERMS = [
+  { id: 1, termValue: 'spring25', termName: 'Spring 2025' },
+  { id: 2, termValue: 'summer125', termName: 'Summer 1 2025' },
+  { id: 3, termValue: 'summer225', termName: 'Summer 2 2025' },
+  { id: 4, termValue: 'fall25', termName: 'Fall 2025' },
+  { id: 5, termValue: 'winter25', termName: 'Winter 2025' },
+  { id: 6, termValue: 'spring26', termName: 'Spring 2026' },
+  // { id: 7, termValue: 'summer126', termName: 'Summer 1 2026' },
+  // { id: 8, termValue: 'summer226', termName: 'Summer 2 2026' },
+  // { id: 9, termValue: 'fall26', termName: 'Fall 2026' },
+  // { id: 10, termValue: 'winter26', termName: 'Winter 2026' },
+  
+]
+
+export const ALL_TERMS_NEW = [
+  { id: 1, termValue: '2025SP', termName: 'Spring 2025' },
+  { id: 2, termValue: '2025FA', termName: 'Fall 2025' },
+  { id: 3, termValue: '2026SP', termName: 'Spring 2026' },
+  { id: 4, termValue: '2026FA', termName: 'Fall 2026' },
+]
+
+export const ALL_LOCATIONS = [
+  { id: 0, locationValue: 'KUU', locationName: 'KEAN UNIVERSITY UNION' },
+  { id: 1, locationValue: 'ONL', locationName: 'ONLINE' },
+  { id: 2, locationValue: 'BROOK', locationName: 'KEAN AT BROOKDALE' },
+  { id: 3, locationValue: 'OCC', locationName: 'KEAN OCEAN' },
+  { id: 4, locationValue: 'SKY', locationName: 'KEAN SKYLANDS' },
+]
 
 export const ALL_COURSES = [
   { id: 1, code: 'ACCT', name: 'ACCOUNTING' },

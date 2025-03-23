@@ -5,6 +5,7 @@ import { toast } from "sonner"
 import { useFormStatus } from "react-dom"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
+import { getUniqueArray } from "@/lib/utils"
 
 const SubmitButton = () => {
   const { pending } = useFormStatus()
@@ -25,20 +26,28 @@ export function WatchCourseForm({
   professor, 
   seats, 
   userId, 
-  term 
+  term,
+  locations,
+  meetingTimes
 }: { 
   courseCode: string
   professor: string
   seats: string
   userId: string
-  term: string 
+  term: string
+  locations: string[]
+  meetingTimes: string[]
 }) {
   const router = useRouter()
+
+  const locationsString = getUniqueArray(locations).join(" ")
+  const meetingTimesString = getUniqueArray(meetingTimes).join(" ")
 
   async function clientAction(formData: FormData) {
     const result = await watchCourse(formData)
 
     const courseName = formData.get("courseCode") as string;
+
     
     if (result.success) {
         toast.success(
@@ -58,8 +67,10 @@ export function WatchCourseForm({
       <input type="hidden" name="courseCode" value={courseCode} />
       <input type="hidden" name="professor" value={professor} />
       <input type="hidden" name="seats" value={seats} />
-      <input type="hidden" name="userId" value={userId} />
+      <input type="hidden" name="userId" value={userId} />  
       <input type="hidden" name="term" value={term} />
+      <input type="hidden" name="locations" value={locationsString} />
+      <input type="hidden" name="meetingTimes" value={meetingTimesString} />
     </form>
   )
 }

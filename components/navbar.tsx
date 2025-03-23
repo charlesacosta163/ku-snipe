@@ -37,9 +37,9 @@ const Navbar = async () => {
         <Link
           href="/dashboard"
           id="Logo"
-          className="block md:hidden font-responsive sm:font-large text-blue-400"
+          className="md:hidden font-[900] tracking-tight font-serif text-[#2A3370] rounded-lg flex items-center gap-2"
         >
-          📘 Snipe
+          📘 KU-WATCH
         </Link>
 
         <div className="flex gap-4 items-center text-sm font-medium">

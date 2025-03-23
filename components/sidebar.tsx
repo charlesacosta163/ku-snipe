@@ -17,7 +17,10 @@ const Sidebar = () => {
     <section className='sticky !important top-4'>
         <div className='w-[250px] h-[calc(100vh-2rem)] bg-transparent flex flex-col gap-4 items-center p-4 rounded-[20px]'>
 
-            <h1 id='Logo' className='logo text-blue-400'>📘 Snipe</h1>
+        <div className='flex flex-col gap-2'>
+          <h1 id='Logo' className='logo font-serif italic bg-[#2A3370] text-white px-4 py-2 text-xs rounded-lg font-semibold flex items-center gap-2'>📘 KU-WATCH</h1>
+          <p className='bg-orange-500 text-white px-2 py-1 text-xs rounded-lg font-semibold self-center'>0.1 Beta</p>
+        </div>
 
             {/* <div className="flex flex-col gap-2 font-medium w-full text-gray-600">
               <Link href='/dashboard' className={`flex items-center gap-2 duration-200 hover:bg-purple-100 px-4 py-2 rounded-lg ${isActive('/dashboard')} shadow-md`}>

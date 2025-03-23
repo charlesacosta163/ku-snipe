@@ -1,13 +1,12 @@
 import React from "react";
-import { Trash } from "lucide-react";
-import { User } from "lucide-react";
 import { auth } from "@/lib/auth";
 import { getWatchedCourses } from "@/lib/actions";
 import NotLoggedIn from "@/components/not-logged-in";
 import Form from "next/form";
 import Link from "next/link";
-import { BookX } from "lucide-react";
+import { BookX, Trash, User, Clock, University } from "lucide-react";
 import DeleteCourseForm from '@/components/delete-course-form'
+import { cn } from "@/lib/utils";
 
 const ManageSnipesPage = async () => {
   const session = await auth();
@@ -17,15 +16,15 @@ const ManageSnipesPage = async () => {
   
   return (
     <div>
-      <h1 className="font-bold text-[2rem] text-[#2A3370] tracking-tight">
-        Your Snipes {courses.length > 0 ? `(${courses.length})` : ""}
+        <h1 className="font-bold text-[2rem] sm:text-[3rem] text-[#2A3370] tracking-tight">
+        🐾 Your Snipes {courses.length > 0 ? `(${courses.length})` : ""} 🐾
       </h1>
 
       <div className="grid grid-cols-1 gap-4 mt-4">
         {courses.length > 0 ? (
           courses.map((course) => {
             return (
-              <div key={course.course_code} className="flex justify-between items-center bg-transparent border-4 border-blue-100 p-4 sm:p-8 rounded-[20px]">
+              <div key={course.course_code} className="flex justify-between items-center bg-[#B8C1E5] bg-opacity-15 p-4 sm:p-8 rounded-[20px]">
                 <div className="flex flex-col gap-2">
                   <div className="flex gap-2 items-center">
                     <div className="w-2 h-2 rounded-full bg-[#4556f8] animate-ping"></div>
@@ -39,11 +38,26 @@ const ManageSnipesPage = async () => {
                       {course.professor}
                     </span>
                   </p>
+
+                  <p className="flex gap-2 items-center">
+                    <University />
+                    <span className="text-gray-500 text-sm font-medium">
+                      {course.locations}
+                    </span>
+                  </p>
+
+                  <p className="flex gap-2 items-center">
+                    <Clock />
+                    <span className="text-gray-500 text-sm font-medium">
+                      {course.meeting_times}
+                    </span>
+                  </p>
+
                   <p className="flex gap-2 items-center">
                     <span className="text-gray-500 text-sm font-medium">
                       {course.available_seats}/{course.total_seats} seats available
                     </span>
-                    <span className="text-xs px-3 py-1 rounded-full bg-red-500 text-white font-medium">
+                    <span className={cn(`text-xs px-3 py-1 rounded-full bg-red-500 text-white font-medium`, course.available_seats < 1 ? "bg-red-500" : "bg-green-500")}>
                       {course.available_seats < 1 ? "Closed" : "Open"}
                     </span>
                   </p>

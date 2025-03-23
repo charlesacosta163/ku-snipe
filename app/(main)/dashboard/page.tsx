@@ -16,8 +16,8 @@ export default async function DashboardPage() {
       <div className="flex flex-col gap-4 mb-10">
 
       <header className="self-center">
-        <h1 className="font-bold text-[3rem] text-[#2A3370] tracking-tight">
-          Hello {name?.split(" ")[0] || "User"}! 
+      <h1 className="font-bold text-[2rem] sm:text-[3rem] text-[#2A3370] tracking-tight">
+      🐾  Hello {name?.split(" ")[0] || "User"}! 🐾
         </h1>
         <p className="text-sm text-blue-950 text-center">Welcome to your Dashboard</p>
       </header>

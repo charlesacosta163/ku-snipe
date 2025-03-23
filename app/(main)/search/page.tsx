@@ -11,8 +11,8 @@ const SnipeCoursesPage = async () => {
     <div className="w-full h-full flex-center">
       <div className="flex flex-col gap-4 max-w-[600px] w-full mb-16">
         <header className="">
-          <h1 className="font-bold text-[3rem] text-[#2A3370] tracking-tight">
-            Search a course
+        <h1 className="font-bold text-[2rem] sm:text-[3rem] text-[#2A3370] tracking-tight">
+          🐾 Search a course
           </h1>
           <p className="text-sm text-gray-500">Find everything here</p>
         </header>
