@@ -24,6 +24,7 @@ import {
   AlignJustify,
   LogOut,
   Bell,
+  Columns3,
 } from "lucide-react";
 
 import { TIER_FEATURES } from "@/lib/constants";
@@ -126,6 +127,13 @@ const Navbar = ({ user }: { user: UserInterface }) => {
                   <Link href="/profile" className="flex items-center gap-2 cursor-pointer">
                     <User className="w-4 h-4" />
                     <span>Profile</span>
+                  </Link>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem asChild>
+                  <Link href="/boards" className="flex items-center gap-2 cursor-pointer">
+                    <Columns3 className="w-4 h-4" />
+                    <span>Boards</span>
                   </Link>
                 </DropdownMenuItem>
                 
