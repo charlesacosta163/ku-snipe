@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
+import CougarImage from "@/public/images/output.jpg"
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     description: "Kean University Course Sniping Tool",
     images: [
       {
-        url: "../public/images/output.jpg", // Path to your image
+        url: CougarImage.src, // Path to your image
         width: 1200,
         height: 630,
         alt: "KU Sniper course tracking preview",
