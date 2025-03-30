@@ -4,7 +4,7 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { LayoutDashboard, BookOpenText, Search, User } from 'lucide-react';
+import { LayoutDashboard, BookOpenText, Search, User, Columns3 } from 'lucide-react';
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -57,6 +57,10 @@ const Sidebar = () => {
               <Link href='/profile' className={`flex justify-between gap-2 bg-[#2A3370] text-[#B8C1E5] duration-200 hover:bg-[#7F8AC9] p-4 rounded-lg ${isActive('/profile')} shadow-md`}>
                 <User className='w-10 h-10' />
                 <span className='self-end text-[1.5rem] font-bold'>Profile</span>
+              </Link>
+              <Link href='/boards' className={`flex justify-between gap-2 bg-[#2A3370] text-[#B8C1E5] duration-200 hover:bg-[#7F8AC9] p-4 rounded-lg ${isActive('/boards')} shadow-md`}>
+                <Columns3 className='w-10 h-10' />
+                <span className='self-end text-[1.5rem] font-bold'>Boards</span>
               </Link>
             </div>
         </div>

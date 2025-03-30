@@ -7,7 +7,8 @@ import Link from "next/link";
 import { BookX, Trash, User, Clock, University } from "lucide-react";
 import DeleteCourseForm from '@/components/delete-course-form'
 import { cn } from "@/lib/utils";
-
+import emptySnipes from "@/public/images/undraw_searching_no1g.svg"
+import Image from "next/image"
 const ManageSnipesPage = async () => {
   const session = await auth();
   if (!session?.user) return <NotLoggedIn />;
@@ -17,7 +18,7 @@ const ManageSnipesPage = async () => {
   return (
     <div>
         <h1 className="font-bold text-[2rem] sm:text-[3rem] text-[#2A3370] tracking-tight">
-        🐾 Your Snipes {courses.length > 0 ? `(${courses.length})` : ""} 🐾
+        🐾 Your Snipes {courses.length > 0 ? `(${courses.length})` : ""} 
       </h1>
 
       <div className="grid grid-cols-1 gap-4 mt-4">
@@ -72,7 +73,7 @@ const ManageSnipesPage = async () => {
           })
         ) : (
           <div className="w-full h-full flex flex-col gap-2 items-center justify-center">
-            <BookX className="w-16 h-16 text-gray-500" />
+            <Image src={emptySnipes} alt="Empty Snipes" width={200} height={200} />
             <p className="text-gray-500 text-[1.2rem] font-medium">
               No courses sniped
             </p>

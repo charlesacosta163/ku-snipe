@@ -144,3 +144,29 @@ export const ALL_COURSES = [
   { id: 95, code: 'YOGA', name: 'YOGA' }
 ]
 
+// Board Colors: Pastel Theme
+// Task Color: Lighter version of the board color
+export const ALL_BOARD_COLORS = [
+  { id: 0, name: 'Default', color: '#FFFFFF', taskColor: '#f7f7f7', textColor: '#000000' }, // Default
+  { id: 1, name: 'Red', color: '#FFB6C1', taskColor: '#f7d5da', textColor: '#000000' }, // Red
+  { id: 2, name: 'Green', color: '#98FB98', taskColor: '#d4edda', textColor: '#000000' }, // Green
+  { id: 3, name: 'Blue', color: '#B7B1F2', taskColor: '#ccc7ff', textColor: '#000000' }, // Blue
+  { id: 4, name: 'Yellow', color: '#FBF3B9', taskColor: '#fcfce5', textColor: '#000000' }, // Yellow
+  { id: 5, name: 'Purple', color: '#DDA0DD', taskColor: '#f2bbf2', textColor: '#000000' }, // Purple
+  { id: 6, name: 'Orange', color: '#FFDCCC', taskColor: '#ffe5d1', textColor: '#000000' }, // Orange
+  { id: 7, name: 'Pink', color: '#FDB7EA', taskColor: '#fcd4f1', textColor: '#000000' }, // Pink
+  { id: 8, name: 'Gray', color: '#D3D3D3', taskColor: '#ebebeb', textColor: '#000000' }, // Gray
+]
+
+export const ALL_BOARD_PRIORITIES = [
+  { id: 1, name: 'High', value: 1, color: "#FF8A8A" },
+  { id: 2, name: 'Medium', value: 2 , color: "#FADA7A"},
+  { id: 3, name: 'Low', value: 3 , color: "#295F98"},
+]
+
+export const ALL_VERSIONS = [
+  { id: 1, status: 'Beta', name: '0.1', tag: "Altrock", fixes: ["Initial release", "Revised the UI/UX for all pages", "New Domain Name (KU WATCH): https://kuwatch.org"]},
+  { id: 2, status: 'Beta', name: '0.2', tag: "Altrock", fixes: [
+    {feature: "Kanban Boards (Free access during Beta)", fixes: ["Added Kanban Boards", "Added Board Colors", "Added Board Priorities", "Added Board Actions"]}, "Modified the Mobile Navigation Dropdown", "Added Version Logs"
+  ]},
+]

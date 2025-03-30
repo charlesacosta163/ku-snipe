@@ -17,7 +17,7 @@ export default async function DashboardPage() {
 
       <header className="self-center">
       <h1 className="font-bold text-[2rem] sm:text-[3rem] text-[#2A3370] tracking-tight">
-      🐾  Hello {name?.split(" ")[0] || "User"}! 🐾
+      🐾  Hello {name?.split(" ")[0] || "User"}! 
         </h1>
         <p className="text-sm text-blue-950 text-center">Welcome to your Dashboard</p>
       </header>
@@ -42,7 +42,7 @@ export default async function DashboardPage() {
               href="/search"
               className="px-4 py-2 rounded-lg text-xl font-bold bg-[#2A3370] hover:bg-blue-800 text-white w-full"
             >
-              New Snipe
+              Watch
             </Link>
           </div>
         </div>
@@ -61,11 +61,11 @@ export default async function DashboardPage() {
             </div>
 
             <p className="text-sm font-semibold text-gray-600">
-              View and manage your active course snipes. Check status or remove courses
+              View and manage your active course watches. Check status or remove courses
             </p>
 
             <Link href="/manage" className="px-4 py-2 rounded-lg text-xl font-bold bg-[#B8C1E5] text-[#2A3370] hover:bg-[#d8e0ff] w-full">
-              Manage Snipes
+              Manage Watchlist
             </Link>
           </div>
         </div>

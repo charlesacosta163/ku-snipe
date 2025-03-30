@@ -7,6 +7,8 @@ import {
   } from "@/components/ui/accordion"
   import Link from 'next/link'
 
+// import SubscribeNewsletterForm from '@/components/subscribe-newsletter-form'
+
 const LandingPage = () => {
   return (
     <main className="h-screen snap-none sm:snap-y sm:snap-mandatory overflow-y-scroll bg-[#FFF5F5]">
@@ -26,7 +28,10 @@ const LandingPage = () => {
 
         <div className="h-full flex flex-col items-center justify-center px-4 pt-20 md:pt-0">
           {/* Logo */}
-          <h1 id='Logo' className='logo font-serif italic bg-[#2A3370] text-white px-4 py-2 text-xs rounded-lg font-semibold flex items-center gap-2 mb-2'>📘 KU-WATCH</h1>
+          <div className="flex flex-col items-center bg-[#2A3370] text-white px-4 py-2 rounded-lg mb-4">
+            <h1 id='Logo' className='logo font-serif italic px-4 py-2 text-xs rounded-lg font-semibold'>📘 KU-WATCH</h1>
+            <span className='font-bold text-sm'>Kean University's Course Sniper</span>
+          </div>
           <p className='bg-orange-500 text-white px-2 py-1 text-xs rounded-lg font-semibold self-center mb-4'>0.1 Beta</p>          {/* Heading */}
           <h1 className="text-4xl sm:text-6xl text-balance text-[#2A3370] font-bold text-center mb-6 tracking-tight">
             Never miss a spot in your<br />favorite courses again
@@ -172,7 +177,7 @@ const LandingPage = () => {
 
           </Accordion>
 
-          <a href='mailto:charlesacosta163@gmail.com' className="text-center">
+          <a href='mailto:contact@kuwatch.org' className="text-center">
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <button className="bg-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 mx-auto hover:bg-gray-50">
               <span>💬</span>
@@ -248,18 +253,23 @@ const LandingPage = () => {
       </section>
       <section id="CTA" className="snap-start h-auto md:h-screen w-full max-w-[1000px] mx-auto">
         <div className="h-full flex flex-col items-center justify-center px-4 py-16 md:py-0 text-center">
-          <div className="bg-[#B8C1E5] bg-opacity-15 rounded-3xl p-12 md:p-16 w-full">
+          <div className="bg-[#B8C1E5] bg-opacity-15 rounded-3xl p-8 sm:p-12 md:p-16 w-full">
             <h2 className="text-2xl sm:text-4xl font-bold mb-6 text-[#2A3370]">
             🐾 Ready to Never Miss a Course Again? 🐾
             </h2>
             <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
               Join fellow students who've already secured their desired courses. Start monitoring your first two courses for free.
             </p>
-            <div className="flex justify-center">
+            <div className="flex flex-col gap-8 items-center">
               <Link href='/signin' className="bg-[#2A3370] text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2">
                 <span>🎯</span>
                 Start Sniping Courses
               </Link>
+              <hr className='w-full border-gray-300 max-w-[400px]' />
+
+              {/* Newsletter Form */}
+              {/* <SubscribeNewsletterForm />  */}
+
             </div>
           </div>
         </div>

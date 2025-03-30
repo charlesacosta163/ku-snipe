@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import NavbarWrapper from "@/components/navbar-wrapper";
 import Sidebar from "@/components/sidebar";
 
 export default function DashboardLayout({
@@ -13,9 +14,9 @@ export default function DashboardLayout({
         <Sidebar />
       </div>
       
-      <main className="flex-1 flex flex-col gap-4">
-        <Navbar />
-        <section className="flex-1">{children}</section>
+      <main className="flex-1 flex flex-col">
+        <NavbarWrapper />
+        <section className="flex-1 min-w-full max-w-full overflow-x-auto mt-4">{children}</section>
       </main>
     </div>
   );
