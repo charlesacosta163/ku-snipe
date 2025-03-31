@@ -87,7 +87,7 @@ const KanbanBoard = async ({
                     </div>
                   </header>
 
-                  <div className="text-xs text-gray-500">{course.note}</div>
+                  <div className="text-xs text-gray-500 my-2">{course.note}</div>
 
                   <div className="flex flex-wrap gap-2">
                     { course.priority && (

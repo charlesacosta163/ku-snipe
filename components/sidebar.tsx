@@ -19,7 +19,7 @@ const Sidebar = () => {
 
         <div className='flex flex-col gap-2'>
           <h1 id='Logo' className='logo font-serif italic bg-[#2A3370] text-white px-4 py-2 text-xs rounded-lg font-semibold flex items-center gap-2'>📘 KU-WATCH</h1>
-          <p className='bg-orange-500 text-white px-2 py-1 text-xs rounded-lg font-semibold self-center'>0.1 Beta</p>
+          <p className='bg-orange-500 text-white px-2 py-1 text-xs rounded-lg font-semibold self-center'>Beta</p>
         </div>
 
             {/* <div className="flex flex-col gap-2 font-medium w-full text-gray-600">

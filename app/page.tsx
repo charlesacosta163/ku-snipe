@@ -32,7 +32,7 @@ const LandingPage = () => {
             <h1 id='Logo' className='logo font-serif italic px-4 py-2 text-xs rounded-lg font-semibold'>📘 KU-WATCH</h1>
             <span className='font-bold text-sm'>Kean University's Course Sniper</span>
           </div>
-          <p className='bg-orange-500 text-white px-2 py-1 text-xs rounded-lg font-semibold self-center mb-4'>0.1 Beta</p>          {/* Heading */}
+          <p className='bg-orange-500 text-white px-2 py-1 text-xs rounded-lg font-semibold self-center mb-4'>Beta</p>          {/* Heading */}
           <h1 className="text-4xl sm:text-6xl text-balance text-[#2A3370] font-bold text-center mb-6 tracking-tight">
             Never miss a spot in your<br />favorite courses again
           </h1>
@@ -120,7 +120,7 @@ const LandingPage = () => {
               </div>
               <h3 className="text-xl font-bold mb-3 text-[#2A3370]">2. We Monitor 24/7</h3>
               <p className="text-gray-600">
-                Our system checks course availability every 30 minutes, ensuring you never miss an opening.
+                Our system checks course availability every 24/7, ensuring you never miss an opening.
               </p>
             </div>
 
@@ -150,7 +150,7 @@ const LandingPage = () => {
             <AccordionItem value="item-1">
               <AccordionTrigger className='text-[#2A3370]'>How does KU Watch work?</AccordionTrigger>
               <AccordionContent>
-                KU Watch monitors your selected courses 24/7. When a seat becomes available, you'll receive a Discord notification reminder of your desired course. Our algorithm checks every 30 minutes.
+                KU Watch monitors your selected courses 24/7. When a seat becomes available, you'll receive a Discord notification reminder of your desired course.
               </AccordionContent>
             </AccordionItem>
 
@@ -265,7 +265,6 @@ const LandingPage = () => {
                 <span>🎯</span>
                 Start Sniping Courses
               </Link>
-              <hr className='w-full border-gray-300 max-w-[400px]' />
 
               {/* Newsletter Form */}
               {/* <SubscribeNewsletterForm />  */}

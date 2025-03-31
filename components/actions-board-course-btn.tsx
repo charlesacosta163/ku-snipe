@@ -54,7 +54,7 @@ const ActionsBoardCourseBtn = ({
   }
 
   async function handleUpdateCourse() {
-    const result = await updateBoardCourse(courseId, newCourseName, newCourseCode, newCourseNotes, newCourseStatus, newCoursePriority);
+    const result = await updateBoardCourse(courseId, newCourseCode, newCourseName, newCourseNotes, newCourseStatus, newCoursePriority);
 
     if (result?.success) {
       toast.success(result.message);
@@ -88,18 +88,6 @@ const ActionsBoardCourseBtn = ({
             <DropdownMenuContent className="p-4" style={{ backgroundColor: color, border: `1px solid lightgray` }}>
               <h2 className="text-lg font-semibold mb-4">Edit {courseName}</h2>
               <Form onSubmit={() => handleUpdateCourse()} className="flex flex-col gap-2">
-                <div className="flex flex-col gap-1">
-                  <label htmlFor="courseName" className="text-sm font-semibold">
-                    New Course Name
-                  </label>
-                  <input
-                    type="text"
-                    id="courseName"
-                    value={newCourseName}
-                    onChange={(e) => setNewCourseName(e.target.value)}
-                    className="w-full px-4 py-2 rounded-md text-sm font-medium bg-white"
-                  />
-                </div>
 
                 <div className="flex flex-col gap-2">
                   <label htmlFor="courseCode" className="text-sm font-semibold">
@@ -110,6 +98,19 @@ const ActionsBoardCourseBtn = ({
                     id="courseCode"
                     value={newCourseCode}
                     onChange={(e) => setNewCourseCode(e.target.value)}
+                    className="w-full px-4 py-2 rounded-md text-sm font-medium bg-white"
+                  />
+                </div>
+                
+                <div className="flex flex-col gap-1">
+                  <label htmlFor="courseName" className="text-sm font-semibold">
+                    New Course Name
+                  </label>
+                  <input
+                    type="text"
+                    id="courseName"
+                    value={newCourseName}
+                    onChange={(e) => setNewCourseName(e.target.value)}
                     className="w-full px-4 py-2 rounded-md text-sm font-medium bg-white"
                   />
                 </div>
