@@ -28,7 +28,7 @@ const ManageSnipesPage = async () => {
               <div key={course.course_code} className="flex justify-between items-center bg-[#B8C1E5] bg-opacity-15 p-4 sm:p-8 rounded-[20px]">
                 <div className="flex flex-col gap-2">
 
-                  {course.is_notified == false ? (
+                  {course.is_notified == true ? (
                     <div className="flex gap-2 items-center text-xs font-semibold bg-green-500 text-white px-2 py-1 rounded-full self-start"> <CheckCircle className="w-4 h-4" /> Notified</div>
                   ): (
                     <div className="flex gap-2 items-center">
