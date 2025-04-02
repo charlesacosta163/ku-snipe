@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import CougarImage from "@/public/images/output.jpg"
+import { Analytics } from "@vercel/analytics/react"
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -45,6 +46,7 @@ export default function RootLayout({
         className={`${inter.variable} ${inter.variable} antialiased`}
       >
         {children}
+        <Analytics />
         <Toaster />
       </body>
     </html>
