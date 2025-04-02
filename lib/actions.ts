@@ -196,6 +196,21 @@ export async function watchCourse(formData: FormData) {
       }
     }
 
+    else if (user.tier === "sharpshooter") {
+      const { count } = (await supabase
+        .from("sniped_courses")
+        .select("*", { count: "exact" })
+        .eq("user_id", user.id)) as { count: number };
+
+      if (count >= 8) {
+        return {
+          success: false,
+          error:
+            "You have reached the max limit of course snipes!",
+        };
+      }
+    }
+
     else {
       return {
         success: false,
