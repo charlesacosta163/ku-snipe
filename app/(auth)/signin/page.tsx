@@ -82,7 +82,7 @@ const AuthPage = () => {
     <form action={formAction} className="max-w-[400px] w-full flex flex-col gap-4 items-center">
       <header className="flex flex-col gap-2 items-center">
       <h1 id='Logo' className='logo font-serif italic bg-[#2A3370] text-white p-4 text-xs rounded-lg font-semibold flex items-center gap-2  !text-[2rem]'>📘 KU-WATCH</h1>
-      <p className='bg-orange-500 text-white px-2 py-1 text-xs rounded-lg font-semibold self-center mb-4'>0.1 Beta</p> 
+      <p className='bg-orange-500 text-white px-2 py-1 text-xs rounded-lg font-semibold self-center mb-4'>Beta</p> 
         <p className="text-sm text-gray-500 text-center">Your course needs start here.</p>
       </header>
       

@@ -211,6 +211,22 @@ export async function watchCourse(formData: FormData) {
       }
     }
 
+    // Modify for production, eliminate this
+    else if (user.tier === "elite") {
+      const { count } = (await supabase
+        .from("sniped_courses")
+        .select("*", { count: "exact" })
+        .eq("user_id", user.id)) as { count: number };
+
+      if (count >= 100) {
+        return {
+          success: false,
+          error:
+            "You have reached the max limit of course snipes!",
+        };
+      }
+    }
+
     else {
       return {
         success: false,

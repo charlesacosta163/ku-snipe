@@ -30,9 +30,9 @@ export default async function DashboardPage() {
           />
 
           <div className="p-4 pt-2 flex flex-col gap-3 items-center text-center bg-opacity-10 bg-[#B8C1E5] rounded-b-[20px]">
-            <div className="font-black text-[2rem] tracking-tight text-blue-400 flex gap-2 items-center">
+            <div className="font-black text-[2rem] tracking-tight text-blue-500 flex gap-2 items-center">
               <ZoomIn />
-              Snipe
+              Watch
             </div>
             <p className="text-sm font-semibold text-gray-600">
               Start monitoring a new course. Get notified instantly when a seat becomes available in your desired class.
@@ -42,7 +42,7 @@ export default async function DashboardPage() {
               href="/search"
               className="px-4 py-2 rounded-lg text-xl font-bold bg-[#2A3370] hover:bg-blue-800 text-white w-full"
             >
-              Watch
+              Watch Course
             </Link>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default async function DashboardPage() {
           />
 
           <div className="p-4 pt-2 flex flex-col gap-3 items-center text-center bg-opacity-10 bg-[#B8C1E5] rounded-b-[20px]">
-            <div className="font-black text-[2rem] tracking-tight text-purple-400 flex gap-2 items-center">
+            <div className="font-black text-[2rem] tracking-tight text-purple-500 flex gap-2 items-center">
               <BookOpenText />
               Manage
             </div>

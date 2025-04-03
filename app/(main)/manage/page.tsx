@@ -18,7 +18,7 @@ const ManageSnipesPage = async () => {
   return (
     <div>
         <h1 className="font-bold text-[2rem] sm:text-[3rem] text-[#2A3370] tracking-tight">
-        🐾 Your Snipes {courses.length > 0 ? `(${courses.length})` : ""} 
+        🐾 Your Watchlist {courses.length > 0 ? `(${courses.length})` : ""} 
       </h1>
 
       <div className="grid grid-cols-1 gap-4 mt-4">

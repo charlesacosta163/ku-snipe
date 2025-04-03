@@ -110,7 +110,7 @@ const SearchInput = () => {
             Search
           </button>
 
-          <button type="button" className="text-sm font-semibold mb-1 flex items-center gap-2 text-white hover:underline" onClick={() => setAdvancedOpen(!advancedOpen)}>Advanced {advancedOpen ? <ChevronDown /> : <ChevronRight />}</button>
+          <button type="button" className="text-sm font-semibold mb-1 flex items-center gap-2 text-white hover:underline" onClick={() => setAdvancedOpen(!advancedOpen)}>Specify Location {advancedOpen ? <ChevronDown /> : <ChevronRight />}</button>
 
         </div>
 
