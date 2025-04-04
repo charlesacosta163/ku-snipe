@@ -3,10 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import NotLoggedIn from "@/components/not-logged-in";
 import { BookOpenText, ZoomIn } from "lucide-react";
+import { TbBrandDiscord } from "react-icons/tb";
+import SignInDiscordBtn from "@/components/signindiscordbtn";
+import { isDiscordLinked } from "@/lib/actions";
 
 export default async function DashboardPage() {
   const session = await auth()
   if (!session?.user) return <NotLoggedIn />    ;
+
+  const isLinked = await isDiscordLinked()
 
   const {name, email, image} = session?.user
 
@@ -21,6 +26,19 @@ export default async function DashboardPage() {
         </h1>
         <p className="text-sm text-blue-950 text-center">Welcome to your Dashboard</p>
       </header>
+
+      <div className="flex flex-col sm:flex-row gap-2 justify-between items-center bg-[#424549] text-white rounded-[20px] px-4 py-2">
+        <div className="font-bold self-center flex items-center gap-2 flex-wrap ">FIXED THE DISCORD LINKING ISSUE</div>
+        {
+          isLinked ?( <div className="flex gap-2 items-center font-medium bg-transparent text-white opacity-50">
+                  {" "}
+                  <TbBrandDiscord className="w-5 h-5" />
+                  Account linked
+                </div>) :   <SignInDiscordBtn />
+        }
+      
+      </div>
+
       <section className="flex-1 flex flex-wrap items-center gap-4 justify-center">
         <div className="flex flex-col w-[300px] rounded-[20px] border-2 border-gray-200">
           <img
@@ -69,6 +87,7 @@ export default async function DashboardPage() {
             </Link>
           </div>
         </div>
+
       </section>
 
 

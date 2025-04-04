@@ -169,4 +169,5 @@ export const ALL_VERSIONS = [
   { id: 2, status: 'Beta', name: '0.2', tag: "Altrock", fixes: [
     {feature: "Kanban Boards (Free access during Beta)", fixes: ["Added Kanban Boards", "Added Board Colors", "Added Board Priorities", "Added Board Actions"]}, "Modified the Mobile Navigation Dropdown", "Added Version Logs"
   ]},
+  { id: 3, status: 'Beta', name: '0.3', tag: "Altrock", fixes: ["FIXED Discord Account Linking Issue", "Minor Bug Fixes", "IMPORTANT NOTE: If a course HAS A WAITLIST, make sure you're already on it — otherwise, you WON\'T be able to register even if a seat becomes available."]}
 ]
