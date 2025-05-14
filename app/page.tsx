@@ -7,7 +7,6 @@ import {
   } from "@/components/ui/accordion"
   import Link from 'next/link'
 
-// import SubscribeNewsletterForm from '@/components/subscribe-newsletter-form'
 
 const LandingPage = () => {
   return (
@@ -266,8 +265,7 @@ const LandingPage = () => {
                 Start Sniping Courses
               </Link>
 
-              {/* Newsletter Form */}
-              {/* <SubscribeNewsletterForm />  */}
+
 
             </div>
           </div>

@@ -8,7 +8,6 @@ import { revalidatePath } from "next/cache";
 import { TIER_LIMITS, ALL_TERMS, ALL_LOCATIONS } from "./constants";
 import { convertTermToYear } from "./utils";
 import { Session, User } from "@/types";
-import mailerlite from "./mailerlite";
 export async function signInWithGoogle() {
   const session = await auth();
   let response;
@@ -19,25 +18,6 @@ export async function signInWithGoogle() {
 
 export async function signOutFromGoogle() {
   await signOut({ redirectTo: "/signin" });
-}
-
-export async function subscribeToNewsletter(formData: FormData) {
-  const email = formData.get("email") as string;
-  console.log(email);
-  const response = await fetch("https://connect.mailerlite.com/api/subscribers", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${process.env.MAILERLITE_API_KEY}`
-    },
-    body: JSON.stringify({ email })
-  })
-
-  if (!response.ok) {
-    return { success: false, error: "Failed to subscribe to newsletter" };
-  }
-
-  return { success: true, message: "You have been subscribed to the KU Watch  newsletter!" };
 }
 
 export async function isDiscordLinked() {
